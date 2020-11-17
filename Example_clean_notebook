@@ -1,0 +1,81 @@
+Last login: Sat Aug 29 11:31:55 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Andreis-MacBook-Pro:~ Andrei$ cd Documents/Code/Depression_practice
+Andreis-MacBook-Pro:Depression_practice Andrei$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   First-attempt-surfboard.ipynb
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Andreis-MacBook-Pro:Depression_practice Andrei$ git add 'First-attempt-surfboard.ipynb' 
+nb-clean clean --remove-empty: nb-clean: command not found
+error: external filter 'nb-clean clean --remove-empty' failed 127
+error: external filter 'nb-clean clean --remove-empty' failed
+Andreis-MacBook-Pro:Depression_practice Andrei$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   First-attempt-surfboard.ipynb
+
+Andreis-MacBook-Pro:Depression_practice Andrei$ git restore --staged 'First-attempt-surfboard.ipynb' 
+Andreis-MacBook-Pro:Depression_practice Andrei$ nb-clean configure-git
+-bash: nb-clean: command not found
+Andreis-MacBook-Pro:Depression_practice Andrei$ nb-clean configure-git --remove-empty
+-bash: nb-clean: command not found
+Andreis-MacBook-Pro:Depression_practice Andrei$ import nb-clean
+-bash: import: command not found
+Andreis-MacBook-Pro:Depression_practice Andrei$ nb-clean
+-bash: nb-clean: command not found
+Andreis-MacBook-Pro:Depression_practice Andrei$ nb-clean configure-git
+-bash: nb-clean: command not found
+Andreis-MacBook-Pro:Depression_practice Andrei$ python -m pip install nb-clean
+/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python: No module named pip
+Andreis-MacBook-Pro:Depression_practice Andrei$ conda activate surfboard
+(surfboard) Andreis-MacBook-Pro:Depression_practice Andrei$ nb-clean configure-git --remove-empty
+(surfboard) Andreis-MacBook-Pro:Depression_practice Andrei$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   First-attempt-surfboard.ipynb
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(surfboard) Andreis-MacBook-Pro:Depression_practice Andrei$ git add 'First-attempt-surfboard.ipynb' 
+(surfboard) Andreis-MacBook-Pro:Depression_practice Andrei$ git commit --m 'Cleaned code'
+[master ff5e19a] Cleaned code
+ Committer: Andrei Birladeanu <Andrei@Andreis-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 357 insertions(+), 1555 deletions(-)
+ rewrite First-attempt-surfboard.ipynb (93%)
+(surfboard) Andreis-MacBook-Pro:Depression_practice Andrei$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 751 bytes | 751.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:andreibirladeanu/Depression_practice.git
+   f08db34..ff5e19a  master -> master
+(surfboard) Andreis-MacBook-Pro:Depression_practice Andrei$ 
