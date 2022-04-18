@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def extract(human):
+def extract(human, frame):
     """takes a human tf-openpose object and returns parsed skeleton coordinates and probabilities """
     all_points = [x for x in range(18)]
     skeleton = []
@@ -13,8 +13,8 @@ def extract(human):
     for x in subscriptable:
         kpts.append(int((x.split('-')[0])))
         original_kpts.append(int((x.split('-')[0])))
-        coords_x.append(float((str(x.split('-')[1]).split(" score=")[0][1:5]))*image.shape[1])
-        coords_y.append(float((str(x.split('-')[1]).split(" score=")[0][6:11]))*image.shape[0])
+        coords_x.append(float((str(x.split('-')[1]).split(" score=")[0][1:5]))*frame.shape[1])
+        coords_y.append(float((str(x.split('-')[1]).split(" score=")[0][6:11]))*frame.shape[0])
         probs.append(float(str(x.split('-')[1]).split(" score=")[1]))
     
     for point in range(len(all_points)): # this ensures that undetected kpoints still have a value (nan) 
