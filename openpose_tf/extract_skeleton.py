@@ -2,7 +2,7 @@ import numpy as np
 
 
 def extract(human):
-    """takes a human openpose object and returns parsed skeleton coordinates and probabilities """
+    """takes a human tf-openpose object and returns parsed skeleton coordinates and probabilities """
     all_points = [x for x in range(18)]
     skeleton = []
     probs = []
