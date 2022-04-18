@@ -13,7 +13,6 @@ def extract(human, frame):
     subscriptable = str(human).split("BodyPart:")[1:]
     for x in subscriptable:
         kpts.append(int((x.split('-')[0])))
-        original_kpts.append(int((x.split('-')[0])))
         coords_x.append(float((str(x.split('-')[1]).split(" score=")[0][1:5]))*frame.shape[1])
         coords_y.append(float((str(x.split('-')[1]).split(" score=")[0][6:11]))*frame.shape[0])
         probs.append(float(str(x.split('-')[1]).split(" score=")[1]))
