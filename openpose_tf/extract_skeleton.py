@@ -1,5 +1,6 @@
 import numpy as np
 
+#tf-pose-estimation implemented from https://github.com/gsethi2409/tf-pose-estimation
 
 def extract(human, frame):
     """takes a human tf-openpose object and returns parsed skeleton coordinates and probabilities """
